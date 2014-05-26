@@ -1,2 +1,16 @@
 .idea/
 *.iml
+devops-core/**/*.iml
+devops-core/**/target/
+Devops-war/**/*.iml
+Devops-war/**/target/
+dummyTests/
+importData2Database/**/*.iml
+importData2Database/**/target/
+jenkins-plugins/**/*.iml
+jenkins-plugins/**/target/
+logs/
+patch-auto/**/*.iml
+patch-auto/**/target/
+UploadBuilds2FTP/**/*.iml
+
