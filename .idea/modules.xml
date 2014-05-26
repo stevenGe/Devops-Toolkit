@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DevopsToolKit.iml" filepath="$PROJECT_DIR$/DevopsToolKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/devops-core/devops-core.iml" filepath="$PROJECT_DIR$/devops-core/devops-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Devops-war/devops-war.iml" filepath="$PROJECT_DIR$/Devops-war/devops-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/importData2Database/importData2Database.iml" filepath="$PROJECT_DIR$/importData2Database/importData2Database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jenkins-plugins/jenkins-plugins.iml" filepath="$PROJECT_DIR$/jenkins-plugins/jenkins-plugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patch-auto/patch-auto.iml" filepath="$PROJECT_DIR$/patch-auto/patch-auto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patch-auto/patch-runtime/patch-runtime.iml" filepath="$PROJECT_DIR$/patch-auto/patch-runtime/patch-runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jenkins-plugins/record-build-info/record-build-info.iml" filepath="$PROJECT_DIR$/jenkins-plugins/record-build-info/record-build-info.iml" />
+    </modules>
+  </component>
+</project>
+
