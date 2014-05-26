@@ -1,0 +1,923 @@
+commit c2eb9d791a06baa4d28046813c25f4da137faa77
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-10
+
+    Edited NEWS
+
+commit 151a3b2551ca41210179fa8f7d1b8ae85919295f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-09
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-09
+
+    Updated Russian, Greek and Brazilian Portuguese translation. Thanks to
+    all translators.
+
+commit 0fc9330748086029507f0dab8767e57c5933f65a
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-09
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-09
+
+    Updated for 1.13.0 release.
+
+commit d83f42ef366b5f3a489b50b237465e4e7b9d6d43
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-05
+
+    s/STD_INPUT_HANDLE/STD_OUTPUT_HANDLE/
+
+commit f66c46e5c9ea79e2bddee1f4d498501dafc36699
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-02
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-02
+
+    Updated Russian man page.
+    
+    Thanks to ITriskTI for translation.
+
+commit 160edc857ddefda84a675be1dea7231c87ca10eb
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-02
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-02
+
+    Updated po templates
+
+commit 8938cef9b3591da8a1f10d6f4915da11e077c973
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-02
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-02
+
+    Made several messages translatable
+
+commit 6c49dfc3791ca5ecd63b515dd49aa7a9174388c4
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-10-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-10-01
+
+    Updated bash_completion
+
+commit a077ddd111e32b3f4d678b60531bc7de0fb43aa2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-28
+
+    Fixed compile error with --without-libxml2 --without-libexpat
+
+commit 5ce9af94ce6ab0265538a54a6472519d104e8c16
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-28
+
+    Check libgcrypt version is greater or equal to required version.
+    
+    This will fixes Debian bug#642989.
+
+commit 9fb6edd60fc3b8e5dd87cc62a9828cc83cdcb3cd
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-27
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-27
+
+    Added --piece-length option to aria2rpc
+
+commit 303cffec8d30f04335fc42df422d5c4b127ed343
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-27
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-27
+
+    Added getServers and forceRemove method to aria2rpc
+
+commit 7e7aeac3ff12ecac15995c83cf51e66338d64447
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-27
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-27
+
+    Added --piece-length option.
+    
+    This option sets a piece length for HTTP/FTP downloads. This is the
+    boundary when aria2 splits a file. All splits occur at multiple of
+    this length. This option will be ignored in BitTorrent downloads.  It
+    will be also ignored if Metalink file contains piece hashes.
+
+commit 05104ba177d792b74c6455516e063c4d9a5a8ebd
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-26
+
+    Removed asString, asList, ... and use downcast<T> instead.
+
+commit 374955da0df726bc643d6466b97ece8b534ad3eb
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-25
+
+    Throw exception if parameter has wrong type in RPC method.
+    
+    Formally, depending on the method implementation, this kind of error
+    is just ignored and parameter is skipped. Now aria2 responds error for
+    these cases. The required parameter checking is also reworked along
+    with this change.
+
+commit fee9b95db376752dc91c61334abbea0add6fcd5b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-11
+
+    Don't check readability of BitTorrent TCP socket.
+    
+    Don't check readability of BitTorrent TCP socket to avoid flooding.
+
+commit 79c59dcbf49cc237354497f1f36d03d68ba5646f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-11
+
+    Cleanup log message for binding server socket.
+    
+    Cleaned up log message for binding server socket.  After binding
+    BitTorrent TCP port, add the socket to DownloadEngine to check
+    readability. This was missing for long time.
+
+commit b775b19366dca169246b906e27bf6244f786c86e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-09-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-09-11
+
+    Check socket is null or not before calling (add|delete)SocketForReadCheck.
+
+commit c408dbba72b67be1a1251e5294e84b33224a3e9b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-28
+
+    Recognize tab as white space before option in -i list.
+
+commit a743bef220f0b0564358f8efe7afedd9df143767
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-25
+
+    Fixed output file path of tests.
+
+commit 72369c20c6e90fe327fdc6a64689626c20e1477b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-25
+
+    Updated bash_completion
+
+commit f25c89b53db2880f0a6e34977ea2c9043305dddd
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-25
+
+    Added usage of --stream-piece-selector=geom option.
+
+commit c7ac14728730d683ca281f9b5dbbac9f3ceaeafa
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-24
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    Added PieceStorage::onDownloadIncomplete() virtual function.
+    
+    In DefaultPieceStorage::onDownloadIncomplete(), we call
+    StreamPieceSelector::onBitfieldInit().
+    Added GeomStreamPieceSelectorTest.
+
+commit b94bf3355b349f6d7824a1ab67c7a1d695e9314a
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-24
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    getGeomMissingUnusedIndex: use index if isBitSet() is false.
+    
+    In getGeomMissingUnusedIndex(), use index if isBitSet() is false
+    instead of finding isUseBitSet() == true and cancel.  Added doc for
+    getGeomMissingUnusedIndex(). Renamed confusing names in bitfield.h.
+
+commit a081f651a17a5251400fd3c332948ed577bcb74c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    GeomStreamPieceSelector: Made base changeable and added offsetIndex
+    parameter.
+
+commit 7318c361bcb4c06537016f2a88813ade79fb8f2d
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    Added geom parameter to --stream-piece-selector option.
+
+commit 201af99501d6e9e166d384564f4393fc3ba454c0
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    Added GeomStreamPieceSelector.
+
+commit 0f72cbab8addbc7817da881b731c2409d42b757f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-24
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    JsonTest: Added test case for decoding escaped chars
+
+commit 846b9b928322d8343f5d31ebc24c713454449450
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-24
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-24
+
+    Detect \b as \f as valid UTF-8 chars.
+
+commit 09ce8960fd3c3b8f61ecfe2616513fd1eebc74f7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Added completedLength response key in aria2.getFiles RPC method.
+
+commit 4a0ac702ab89a932572b672cb2de0462df12b596
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Added usage example for --checksum option.
+
+commit 91220f20ca72c65851b31bfb42678678e8858b3b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Added #checksum help tag.
+
+commit 8346b715937a7e4957d642f35902fd50aebb93f6
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Added --checksum option to aria2rpc
+
+commit b7b5fac13c31b47b20f4953268521a8803d68712
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Updated usage of -V option.
+
+commit a1aa9da364be1f411e76cdafb2e6f0100bef0687
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Documented --checksum option in man page.
+
+commit 401a217369d7102c799733ec69604010515cafe6
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Added --checksum option.
+    
+    Added --checksum=TYPE=DIGEST option. This option sets checksum. TYPE
+    is hash type. The supported hash type is listed in "Hash Algorithms"
+    in "aria2c -v". DIGEST is hex digest.  For example, setting sha-1
+    digest looks like this: sha-1=0192ba11326fe2298c8cb4de616f4d4140213838
+    This option applies only to HTTP(S)/FTP downloads.
+
+commit 8ec6cd1c44794c5b89b9dc55e4405b7713be4fad
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-23
+
+    Removed redundant MessageDigest::supports() call.
+    
+    MessageDigest::supports() will be called from
+    MessageDigest::isValidHash() later in the function.
+
+commit 73f049bf9ad2d5a3e09958af4c9fd05fc41e2fb8
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Added --hash-check-only option to aria2rpc
+
+commit 461d49d2d973275be00cef6599cb429828e1e2de
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Documented --hash-check-only option in man page.
+
+commit 6c5c79664658e09f2ff8d890bba8106e4e9916c9
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Added --hash-check-only opiton.
+    
+    Added --hash-check-only opiton.  If true is given, after hash check
+    using --check-integrity option, abort download whether or not download
+    is complete. The default value is false.
+
+commit 0d36c466d9c81030d1622294f2b0ade4fd0b5927
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Documented --download-result option in man page.
+
+commit f7aeb86ccc321889c0695556448c23715fe3686b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Added --download-result option.
+    
+    Added --download-result=OPT option.  This option changes the way
+    "Download Results" is formatted. If OPT is 'default', print GID,
+    status, average download speed and path/URI. If multiple files are
+    involved, path/URI of first requested file is printed and remaining
+    ones are omitted.  If OPT is 'full', print GID, status, average
+    download speed, percentage of progress and path/URI. The percentage of
+    progress and path/URI are printed for each requested file in each row.
+
+commit 205afd20fdcf19784546cd49b718a69cb3d03ba2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-22
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-22
+
+    Added build test with libgcrypt
+
+commit e43350f5460bf2561b6ff3619e91e1d3afbfb1b4
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-20
+
+    Fixed typo and updated.
+
+commit 3c73b6e76746e03f21ef401f17180a296b4a66d3
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-20
+
+    Eliminated inet_ntoa and inet_ntop. Use getnameinfo() instead.
+
+commit af46293ef93a056bcd06f4b8f973fe5aa395d20f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-19
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-19
+
+    Use utimes instead of utime if utimes is available.
+
+commit 3fe4e8444375d7b5eb85afce7d9dd6c75cea0f7c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-19
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-19
+
+    Removed unused preferences.
+
+commit d309c425a3d67e733543b945173b34c9effed334
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-19
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-19
+
+    Bump up version number to 1.13.0
+
+commit f80afcaf1dc51b5170726de5c5f1a5845d4f7a9c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-18
+
+    Documented --rpc-allow-origin-all option in man page.
+
+commit 384ef111b90b7bcb04b8ff477eca7218a99cb98d
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-18
+
+    Added --rpc-allow-origin-all option.
+    
+    This option adds Access-Control-Allow-Origin header field with value
+    '*' to the RPC response.
+
+commit 4c1c38a33f669ce09fe9b6cd046b270cf70253ac
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-18
+
+    Ignore --out option supplied in command-line if -i is used.
+    
+    You can still use out option in the text file specified in -i.
+
+commit bf42505b7b32400bfdc183fb5f1588394e6417dc
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-18
+
+    MinGW32: Use CryptGenRandom() to generate random number.
+    
+    MinGW32 lacks random(), so we use CryptGenRandom() as a replacement.
+    In the implementation, SimpleRandomizer::getRandomNumber() returns the
+    random number in range [0, INT32_MAX]. Thus,
+    simpleRandomizer::getMaxRandomNumber() returns INT32_MAX.
+
+commit dce0667c0be31a8dbaee3f6ec7e223d11ec9f7dd
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-18
+
+    MinGW32 build: Replace all '\' in path with '/' in util::applyDir()
+    
+    In MinGW32 build, replace all '\' in path with '/' in
+    util::applyDir().  Take into account '\' in File::getBasename() and
+    File::getDirname().
+
+commit 58c5dc792887fb53ad7718d09567e7c72ef1fc7a
+Merge: fd3e767 e6f3c78
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-16
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-16
+
+    Merge pull request #1 from crrodriguez/patch-1
+    
+    Disable SSLv2 by default and optimize memory usage
+
+commit e6f3c781038de68c6eb24e7c1532ee3fcc3a9c93
+Author:     Cristian Rodríguez <yo@cristianrodriguez.net>
+AuthorDate: 2011-08-15
+Commit:     Cristian Rodríguez <yo@cristianrodriguez.net>
+CommitDate: 2011-08-15
+
+    - Disable SSLv2 and enable all workarounds for buggy servers
+    - Keep memory usage low when openSSL supports SSL_MODE_RELEASE_BUFFERS
+
+commit fd3e7671a5429594ba26a98d43c8271c26b15f1d
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-11
+
+    Use random() instead of rand().
+
+commit e76dc28f7fc26e994a1f3ddf1f665035fcb690e3
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-11
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-11
+
+    Added libnettle and libgmp support.
+    
+    libnettle and libgmp is used by default. Old implementation uses
+    libgcrypt as default. If more and more Linux distributions offer
+    libnettle linked GnuTLS, then this change decrease library dependency
+    against libgcrypt and libgpg-error.  The current library detection for
+    libnettle and libgmp is very simple, just use AC_SEARCH_LIBS.
+    util::generateRandomData() was written using SimpleRandomizer, thus no
+    external library dependency from this function.
+
+commit 11ac2c4a8885480b64610089ab0da1c4478e6815
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-11
+
+    Added DHKeyExchange implementation using GMP.
+
+commit 6edfa4e430d4f44dbcbb26dd236028bcc503a312
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    Limit maximum length of ByteArrayWriter.
+    
+    aria2 downloads meta files such as .torrent and .metalink file in
+    memory using ByteArrayWriter. To prevent accidentally download big
+    file, we set the maximum length that ByteArrayWriter can hold.  The
+    default is 5MiB and it is reasonable because most .torrent and
+    .metalink file are much smaller than that.
+
+commit 2d9323651b47bf4869d818045ad490aa59bfe632
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    Don't use sorted std::deque for requestSlots_.
+    
+    Don't use sorted deque for requestSlots_. For the most time, first
+    data requested is sent back first. So using std::deque, we find
+    received RequestSlot by O(1), while sorted std::deque requires
+    O(logN).
+
+commit 6ee913b0bcd882d672ab5e81a8aa9a6fc8621e2c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    Simplified PieceStatMan and RarestPieceSelector.
+    
+    Simplified PieceStatMan and RarestPieceSelector, but computation order
+     to select piece index is still O(N) and unchanged.  Updating piece
+     stat is improved to O(N) for bitfield update and O(1) for single
+     index update, while old implementation needs O(NlogN) and O(N)
+     respectively.
+
+commit 37016c65875986a098d4ad6ca9f138064932b137
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    global cout and cerr is now retrieved using global::cout() and global::cerr()
+    
+    This is necessary to avoid global variable initialization order
+    problem.
+
+commit e8e3a6f259ab74c486aec9b5ea95d3e1f5068f6c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    wallclock is now retrieved using global::wallclock() call.
+    
+    This is necessary to avoid global variable initialization order
+    problem.
+
+commit 97f34ab6682d83d9a0265a4291b44eaf45703493
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-10
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-10
+
+    Added global::cerr. windows.h now included from common.h
+    
+    We replaced most of std::cerr with global::cerr.  windows.h is now
+    included from common.h. Before including it, we define WINVER.  We
+    renamed some variable name because some macros in windows.h collide
+    with them.
+
+commit a10cda2f17916895d8c6bc3cd69a360947017771
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-09
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-09
+
+    Use global::cout to output string to stdout.
+    
+    In MinGW32 build, global::cout is WinConsoleFile. When outputing to
+    console, it uses WriteConsoleW, so Unicode characters are written.
+    Fixed memory leak in WChar<->MultiByte conversion functions.  The
+    portion of code which uses std::cout is rewritten to use global::cout.
+
+commit 02307cee0a395d8405d0e160664d4a37c79fe16c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-08
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-08
+
+    Removed utf8ToNative from log message and exception message.
+
+commit 7368c9c9d8515232204d3708a3e2233454368aec
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Percent-encode non-printable ASCII and non-ASCII chars in FileEntry.
+    
+    Percent-encode non-printable ASCII and non-ASCII chars in URI using
+    util::percentEncodeMini() when URI is added to FileEntry.  Removed
+    percent-encode from Request. Also do percent-encoding when setting
+    referer and redirected URI.
+
+commit 491e8bc519fc1c7462321b9cff5719d18e812ac6
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Call utf8ToNative to log filename and URI in Metalink2RequestGroup.
+
+commit e9d16306df008a8e2d04a53ddef996a6829708ce
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Made getRedirectURI and getTransferEncoding return const reference.
+    
+    Made getRedirectURI and getTransferEncoding in HttpResponse return
+    const reference.
+
+commit 272d81b7a1e6c96b4929a6c63dd20e3cd1eb3e15
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten ExpatMetalinkProcessor using BufferedFile.
+
+commit 32d413c6de71751f8d10187cd026c88b9d345f03
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Use BufferedFile::printf in SessionSerializer
+
+commit fd5f9127cd554d711a51df458fc1e6e23d812dde
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten Logger using BufferedFile.
+
+commit b6b8cb005dfb37646e92c4fa9b6805266cdc4632
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Added printf and flush method to BufferedFile.
+
+commit e2d682e0c6f786856946133bc34e2ae5e9ddbd8f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    bencode2::decodeFromFile is now first read torrent metainfo file into
+    memory before parsing it.
+
+commit 4220c2aadcc84894e838636ed952a876eb24d1fa
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Read aria2.conf using BufferedFile
+    
+    Read aria2.conf using BufferedFile. Added BufferedFile::transfer().
+
+commit b3b67f440b286962d3ceb3b8db016c0c33efebf5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Removed unused function declaration.
+
+commit 0f349773f5eb1ef42d5bad3b522be3ba50da71bc
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten saveAs using BufferedFile
+
+commit a6c2ad53bf7b62218ed8b21fef2934ed0796a64f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten UriListParser using BufferedFile
+
+commit 945012a32ff30bc029db39bb878dcf6c4ed23dd4
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Removed unused header
+
+commit 1f710d29c1b51257327809b55823a7005c0ab7e0
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten SessionSerializer using BufferedFile
+
+commit 60344745500cec5c12201d38a6517a7c2061fa81
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Don't allow copying BufferedFile
+
+commit 190d1700762e68ae4204b67b07cdf31c550482e4
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Rewritten ServerStatMan using BufferedFile.
+
+commit 7f3d027b83761eacb581624c4ca9d48b668c3a6c
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-07
+
+    Removed feof from operator unspecified_bool_type. Added eof().
+    
+    In BufferedFile, removed feof from operator unspecified_bool_type. EOF
+    can be queried separately using newly added eof().
+
+commit f6472abae8b422eb55de3fabe30915458bf557be
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Compare 16bytes of header text.
+
+commit 8f93855bbd826353ca77a30996a4100cea47b55d
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Rewritten ProtocolDetector using BufferedFile
+
+commit c553d92f45f292e0456eaee03e204845fcc9e018
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Rewritten NsCookieParser using BufferedFile
+
+commit f38c2d20129e893aaf37f5126882754b9664b346
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Rewritten Netrc using BufferedFile.
+
+commit c9f8cf75bf72eb44b77736b0678b9a5094d7f5f5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Rewritten CookieStorage using BufferedFile
+
+commit 410d88710b193123fb489ae5a489ac9a5e1347f9
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Rewritten DHTRoutingTable I/O using BufferedFile.
+
+commit ef27370243a1bea43db0b8c73def0b9e68e8ae16
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Use BufferedFile in DefaultBtProgressInfoFile
+
+commit 6cb91cae88d4105793efe833640e34e115a51aa3
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-06
+
+    Added fopen/fread/fwrite/fgets wrapper class.
+
+commit 733ff2c05a42868574e00644cb79578dc5ebe1bc
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten NsCookieParser using stdio instead of stream.
+
+commit 07874696c5fef449fbcfe386dcacec9db205188b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten Netrc using stdio instead of stream.
+
+commit 13158de0d33be64b6c3f1e268aca519914bad41b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Removed unused header fstream from DHTSetup
+
+commit 168094560deb5585b3f489e7583c96cd5d71f911
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten CookieStorage using stdio instead of stream
+
+commit 292bbb3679a16c47926db384f75eab6fcc2785ff
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Added log messages to DHTRoutingTable IO routines.
+
+commit dea7a7969c4be5d4239f7f31e1cc597f0b792784
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten DHTRoutingTableSerializer using stdio instead of stream.
+
+commit f141cd4228018b8699b403bd4e67e8891d27e9c2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten DHTRoutingTableDeserializer using stdio instead of stream.
+
+commit 5eb338ad870d4f2824ced82ddf37f6325777663e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-05
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-05
+
+    Rewritten DefaultBtProgressInfoFile using stdio instead of stream.
+
+commit 3879da592d689d551778b710c21c8a95d2874ab3
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2011-08-04
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2011-08-04
+
+    In MinGW32, open file with UNICODE filename and print them in ANSI.

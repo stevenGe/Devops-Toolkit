@@ -1,0 +1,19 @@
+--- mingw-runtime-3.13-20070825-1/mingwex/gdtoa/mingw_snprintf.c.orig	2010-02-16 00:13:41.000000000 +0900
++++ mingw-runtime-3.13-20070825-1/mingwex/gdtoa/mingw_snprintf.c	2010-02-16 00:14:47.000000000 +0900
+@@ -465,7 +465,7 @@
+ 				    len = LEN_LL;
+ 				  }
+   				else
+-				  len = LEN_LL;
++				  len = LEN_L;
+ 				goto fmtloop;
+ 			case 'L':
+ 				flag_ld++;
+@@ -617,6 +617,7 @@
+ 					break;
+ 				  case LEN_S:
+ 					*(short*)ip = c;
++                                        break;
+ 				  case LEN_LL:
+ 					*(long long*) ip = c;
+ 					break;

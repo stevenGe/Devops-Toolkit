@@ -1,0 +1,90 @@
+aria2 1.13.0
+============
+
+Release Note
+------------
+
+This release fixed libgcrypt version check error. Several command line
+options were added. For details of each new option, read changes
+below.  aria2 now returns error response if RPC request parameter has
+wrong type.  For MinGW32 build, Unicode filenames support was added.
+
+From this release, aria2 uses libnettle and libgmp by default instead
+of libgcrypt.  If you want to use libgcrypt, use configure options
+--without-libnettle --with-libgcrypt.
+
+Changes
+-------
+
+ * Check libgcrypt version is greater or equal to required version.
+   This will fixes Debian bug#642989.
+
+ * Added --piece-length option.  This option sets a piece length for
+   HTTP/FTP downloads. This is the boundary when aria2 splits a
+   file. All splits occur at multiple of this length. This option will
+   be ignored in BitTorrent downloads.  It will be also ignored if
+   Metalink file contains piece hashes.
+
+ * Throw exception if parameter has wrong type in RPC method.
+   Formally, depending on the method implementation, this kind of
+   error is just ignored and parameter is skipped. Now aria2 responds
+   error for these cases. The required parameter checking is also
+   reworked along with this change.
+
+ * Cleanup log message for binding server socket.
+
+ * Recognize tab as white space before option in -i list.
+
+ * Added geom parameter to --stream-piece-selector option.  If 'geom'
+   is given, at the beginning aria2 selects piece which has minimum
+   index like 'inorder', but it exponentially increasingly keeps space
+   from previously selected piece. This will reduce the number of
+   establishing connection and at the same time it will download the
+   beginning part of the file first. This will be useful to view movie
+   while downloading it.
+
+ * Added completedLength response key in aria2.getFiles RPC method
+
+ * Added #checksum help tag.
+
+ * Added --checksum option.  Added --checksum=TYPE=DIGEST option. This
+   option sets checksum. TYPE is hash type. The supported hash type is
+   listed in "Hash Algorithms" in "aria2c -v". DIGEST is hex digest.
+   For example, setting sha-1 digest looks like this:
+   sha-1=0192ba11326fe2298c8cb4de616f4d4140213838 This option applies
+   only to HTTP(S)/FTP downloads.
+
+ * Added --hash-check-only opiton.  Added --hash-check-only opiton.
+   If true is given, after hash check using --check-integrity option,
+   abort download whether or not download is complete. The default
+   value is false.
+
+ * Added --download-result option.  Added --download-result=OPT
+   option.  This option changes the way "Download Results" is
+   formatted. If OPT is 'default', print GID, status, average download
+   speed and path/URI. If multiple files are involved, path/URI of
+   first requested file is printed and remaining ones are omitted.  If
+   OPT is 'full', print GID, status, average download speed,
+   percentage of progress and path/URI. The percentage of progress and
+   path/URI are printed for each requested file in each row.
+
+ * Added --rpc-allow-origin-all option.  This option adds
+   Access-Control-Allow-Origin header field with value '*' to the RPC
+   response.
+
+ * Ignore --out option supplied in command-line if -i is used.  You
+   can still use out option in the text file specified in -i.
+
+ * Disable SSLv2 by default and optimize memory usage.
+   Patch from Cristian Rodríguez.
+
+ * Added libnettle and libgmp support.  libnettle and libgmp is used
+   by default. Old implementation uses libgcrypt as default. If more
+   and more Linux distributions offer libnettle linked GnuTLS, then
+   this change decrease library dependency against libgcrypt and
+   libgpg-error.  The current library detection for libnettle and
+   libgmp is very simple, just use AC_SEARCH_LIBS.
+   util::generateRandomData() was written using SimpleRandomizer, thus
+   no external library dependency from this function.
+
+ * In MinGW32, open file with UNICODE filename and print them in ANSI.

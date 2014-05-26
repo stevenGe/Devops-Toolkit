@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>patch-auto</artifactId>
+        <groupId>com.hp.xs.devops</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>patch-runtime</artifactId>
+
+    <properties>
+        <xs-version>9.41.00-SNAPSHOT</xs-version>
+        <patch-version>9.41.00-0001</patch-version>
+    </properties>
+
+    <!-- Notice:  Please check the branch url for your code check-in path -->
+    <scm>
+        <connection>scm:svn:https://csvnatl-pro.atlanta.hp.com:18580/svn/btoe-dev/branches/development/xs-9.41.470-patch/</connection>
+        <url>https://csvnatl-pro.atlanta.hp.com:18580/svn/btoe-dev/branches/development/xs-9.41.470-patch/</url>
+    </scm>
+
+    <dependencies>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <artifactItems>
+                                <!-- Foundation module -->
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.foundation</groupId>
+                                    <artifactId>fndwar</artifactId>
+                                    <type>war</type>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+								<artifactItem>
+                                    <groupId>com.hp.btoe.bsf</groupId>
+									<artifactId>bsf-connector</artifactId>                                    
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.core</groupId>
+                                    <artifactId>crypto</artifactId>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.supervisor</groupId>
+                                    <artifactId>supervisor</artifactId>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.core</groupId>
+                                    <artifactId>utils</artifactId>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.postinstall</groupId>
+                                    <artifactId>main-configwizard</artifactId>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <!-- Apps module-->
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.fpa</groupId>
+                                    <artifactId>fpawar</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.cap</groupId>
+                                    <artifactId>CAP-Web</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.dashboard</groupId>
+                                    <artifactId>dashboard-webapp</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.kpimng</groupId>
+                                    <artifactId>kpi-mng-web</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.xs2go</groupId>
+                                    <artifactId>xs2go-webapp</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.bsf</groupId>
+                                    <artifactId>bsf-ui</artifactId>
+                                    <type>war</type>
+                                    <version>${xs-version}</version>
+                                </artifactItem>
+                                <!-- dataWareHouse module -->
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.dw</groupId>
+                                    <artifactId>dw-abc-services</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.dw</groupId>
+                                    <artifactId>dw-abc-web</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.hp.btoe.dw</groupId>
+                                    <artifactId>dw-web</artifactId>
+                                    <version>${xs-version}</version>
+                                    <type>war</type>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

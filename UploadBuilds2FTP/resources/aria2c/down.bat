@@ -1,0 +1,1 @@
+aria2c -s 16 -x 16 -j 16 -k 100M ftp://agora:agora@16.44.48.137/BTOA/SP-LATEST/HPXS-installer-9.02.LP-570-win64.zip

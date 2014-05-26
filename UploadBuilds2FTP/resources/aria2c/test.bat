@@ -1,0 +1,1 @@
+aria2c -s 16 -x 16 -j 16 -k 100M ftp://agora:agora@16.44.48.137/BTOA/TRUNK-LATEST//HPXS-installer-9.40.00-SNAPSHOT-968-win64.zip

@@ -1,0 +1,40 @@
+aria2c.exe was generated using Debian cross compiler:
+
+ * gcc-mingw32      4.4.4-0.1+b1
+ * mingw32-binutils 2.20-0.1
+ * mingw32-runtime  3.13-1 with included mingw_snprintf.patch
+
+It was static build so no extra dll necessary. aria2c.exe was built
+with following libraries:
+
+ * openssl 0.9.8r
+ * expat 2.0.1
+ * sqlite 3.7.6.2
+ * zlib 1.2.5
+ * c-ares 1.7.4
+
+This build has the following difference from original release:
+
+ * --disable-ipv6 is enabled by default. (IPv6 support is disabled by
+     default).
+
+== Known Issues ==
+
+ * When Ctrl-C is pressed, aria2 shows "Shutdown sequence
+   commencing... Press Ctrl-C again for emergency shutdown." But
+   mingw32 build cannot handle second Ctrl-C properly. The second
+   Ctrl-C just kills aria2 instantly without proper shutdown sequence
+   and you may lose data. So don't press Ctrl-C twice.
+
+ * When --disable-ipv6=false is given, BitTorrent DHT does not work
+   properly.
+
+ * --daemon option doesn't work.
+
+ * Most of the IPv6 functionality does not work even if
+   --disable-ipv6=false is given.
+
+== Reference ==
+
+ * http://smithii.com/aria2
+ * http://kemovitra.blogspot.com/2009/12/download-aria2-163.html
