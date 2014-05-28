@@ -11,13 +11,10 @@ package com.hp.devops.xs.patch.parser;
 import com.hp.devops.xs.patch.operation.FileAction;
 import com.hp.devops.xs.patch.operation.FileActionFactory;
 
+import com.hp.devops.xs.patch.resources.FileResource;
+import nu.xom.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import nu.xom.Builder;
-import nu.xom.Document;
-import nu.xom.ParsingException;
-import nu.xom.Elements;
-import nu.xom.Element;
 
 import java.io.File;
 import java.io.IOException;
@@ -75,15 +72,28 @@ public class PatchResolver {
         return actions;
     }
 
-    public ArrayList<FileAction> resolveActions() {
-        ArrayList<FileAction> actionsCollection = new ArrayList<FileAction>();
+    public ArrayList<FileResource> resolveActions() {
+        ArrayList<FileResource> actionsCollection = new ArrayList<FileResource>();
         Elements actions = getActions();
         for(int i = 0; i < actions.size(); i++) {
             Element oneItem = actions.get(i);
-            FileAction actionItem = FileActionFactory.generateFileAction(oneItem.getLocalName() ,oneItem);
-            actionsCollection.add(actionItem);
+            actionsCollection.add(generateFileResource(oneItem));
         }
+//        for(int i = 0; i < actions.size(); i++) {
+//            Element oneItem = actions.get(i);
+//            FileAction actionItem = FileActionFactory.generateFileAction(oneItem.getLocalName() ,oneItem);
+//            actionsCollection.add(actionItem);
+//        }
         return actionsCollection.size() == 0 ? null : actionsCollection;
+    }
+
+    private FileResource generateFileResource(Element item) {
+        FileResource fileResource = null;
+        Attribute name = item.getAttribute("name");
+        Attribute source = item.getAttribute("source");
+        Attribute target = item.getAttribute("target");
+        fileResource = new FileResource(name.getValue(), source.getValue(), target.getValue());
+        return fileResource;
     }
 
     public Document getPatchDoc() {

@@ -10,19 +10,25 @@ import java.io.File;
  * @version 1.0.0-snapshot
  * Date: 5/25/14
  * Time: 5:19 PM
- * abstract class FileAction, abstract some operations here
+ * Basic class FileAction, abstract some operations here
  */
 
 public class FileAction implements Action {
     Logger _logger = LoggerFactory.getLogger(FileAction.class);
 
+    protected Element fileElement;
     protected String fileName;
     protected String sourceDir;
     protected String targetDir;
     protected String requireFeatures;
 
-    public FileAction(Element element) {
 
+    public FileAction() {
+
+    }
+
+    public FileAction(Element element) {
+        this.fileElement = element;
     }
 
     public FileAction(String fileName, String sourceDir, String targetDir, String requireFeatures) {
@@ -30,6 +36,18 @@ public class FileAction implements Action {
         this.sourceDir = sourceDir;
         this.targetDir = targetDir;
         this.requireFeatures = requireFeatures;
+    }
+
+    public void initializeByElement() {
+        if(this.fileElement == null) {
+            _logger.error("file element is null, please check!");
+        } else {
+
+        }
+    }
+
+    public void resolveElement() {
+
     }
 
     @Override
@@ -49,7 +67,11 @@ public class FileAction implements Action {
         return 1;
     }
 
-    private File getSourceFile() {
+    /*
+    ** get the source file name & path from source directory
+    ** e.g. /usr/gexinlu/utils-9.40.00-SNAPSHOT.jar
+     */
+    public File getSourceFile() {
         File sourceFile = new File(this.sourceDir + File.separator + this.fileName);
         if(!sourceFile.exists()) {
             _logger.error("Source File: " + this.fileName + " does not exist, please check!");
@@ -58,7 +80,10 @@ public class FileAction implements Action {
         return sourceFile;
     }
 
-    private File createTargetFolder() {
+    /*
+    ** create the target folder with parent folder
+     */
+    public File createTargetFolder() {
         File targetFileDir = new File(this.targetDir + File.separator);
         if( !(targetFileDir.exists() || targetFileDir.mkdirs()) ) {
             _logger.error("Failed to create target folder, please check!");

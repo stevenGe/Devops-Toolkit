@@ -9,6 +9,7 @@ package com.hp.devops.xs.patch.parser;
  */
 
 import com.hp.devops.xs.patch.operation.FileAction;
+import com.hp.devops.xs.patch.resources.FileResource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -56,7 +57,7 @@ public class TestPatchResolver {
 
     @Test
     public void testResolveActions() {
-        ArrayList<FileAction> testActionCollection = resolver.resolveActions();
+        ArrayList<FileResource> testActionCollection = resolver.resolveActions();
         assertNotNull(testActionCollection);
     }
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Patch createdOn="2014-05-8 13:46:40" description="9.41 patch" id="2" name="9.41.00 patch" productVersion="9.41" state="New">
+  <Actions>
+
+
+	<AddFileAction name="jmxsecurity.properties" source="agora\Conf\jmxsecurity.properties" target="agora\Conf\jmxsecurity.properties" requireFeatures ="DWH,XS" />
+  </Actions>
+</Patch>
+
+
+

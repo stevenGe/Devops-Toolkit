@@ -1,10 +1,3 @@
-2014-05-25 22:25:57,004  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-25 22:25:57,040  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-25 22:25:57,056  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-25 22:29:16,332  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-25 22:34:58,274  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-26 15:02:08,035  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-26 15:02:08,076  INFO   [PatchResolver] Start to initialize patch.xml 
-2014-05-26 15:02:08,091  INFO   [PatchResolver] Start to get actions 
-2014-05-26 15:02:08,093  INFO   [PatchResolver] get the root element:  
-2014-05-26 15:02:08,097  INFO   [PatchResolver] Start to initialize patch.xml 
+2014-05-28 17:21:11,657  INFO   [PatchResolver] Start to initialize patch.xml 
+2014-05-28 17:21:11,674  INFO   [PatchResolver] Start to get actions 
+2014-05-28 17:21:11,676  INFO   [PatchResolver] get the root element:  
